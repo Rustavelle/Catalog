@@ -1,5 +1,4 @@
 package java_rustem.jpa_lessons.entyti;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -11,8 +10,8 @@ public class Characteristic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne // Для того что бы строить связь
-    @JoinColumn(name = "category_id") // всегда прописывается после @ManyToOne
+    @ManyToOne
+    @JoinColumn(name = "category_id")
     private Category category;
 
     @OneToMany
@@ -25,30 +24,37 @@ public class Characteristic {
     }
 
     public void setId(long id) {
+
         this.id = id;
     }
 
     public Category getCategory() {
+
         return category;
     }
 
     public void setCategory(Category category) {
+
         this.category = category;
     }
 
     public List<Meaning> getMeanings() {
+
         return meanings;
     }
 
     public void setMeanings(List<Meaning> meanings) {
+
         this.meanings = meanings;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 }

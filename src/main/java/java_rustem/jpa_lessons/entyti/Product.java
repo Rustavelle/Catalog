@@ -18,15 +18,13 @@ public class Product {
     @Column(name = "product_name")
     private String name;
 
-    @OneToMany (mappedBy = "product", cascade = CascadeType.REMOVE) // каскадные действия, отвечают за то что должно
-    // произойти с записями приявязвнными к базовой записи с которой производится удоления либо изменения
-    // cascade = CascadeType.REMOVE - при удоление продукта удоляются привязанные записи ( характеристики )
-    // cascade = CascadeType.REMOVE - в случае удоления основной записи удоляют все привязанные записи из внешней таблицы
+    @OneToMany(mappedBy = "product")
     private List<Meaning> meaning;
 
     private double price;
 
     public long getId() {
+
         return id;
     }
 
