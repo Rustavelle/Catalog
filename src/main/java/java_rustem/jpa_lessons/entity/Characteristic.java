@@ -1,4 +1,4 @@
-package java_rustem.jpa_lessons.entyti;
+package java_rustem.jpa_lessons.entity;
 import javax.persistence.*;
 import java.util.List;
 

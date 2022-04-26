@@ -1,4 +1,8 @@
-package java_rustem.jpa_lessons.entyti;
+import java_rustem.jpa_lessons.entity.Category;
+import java_rustem.jpa_lessons.entity.Characteristic;
+import java_rustem.jpa_lessons.entity.Meaning;
+import java_rustem.jpa_lessons.entity.Product;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
