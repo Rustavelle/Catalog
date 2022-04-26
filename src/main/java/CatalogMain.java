@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class Catalog {
+public class CatalogMain {
 
     public static Scanner scanner = new Scanner(System.in);
 
