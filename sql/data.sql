@@ -1,23 +1,24 @@
+SET FOREIGN_KEY_CHECKS = 0;
 truncate table meaning;
 truncate table characteristic;
 truncate table products;
 truncate table category_products;
-
+SET FOREIGN_KEY_CHECKS = 1;
 
 insert into category_products(id, category_name)
 values (1, 'Мониторы'),
-       (4, 'Фотоопараты');
+       (2, 'Фотоаппараты');
 
 insert into products(category_id, product_name, price)
 values (1, 'Монитор Игровой Samsung Dark Blue', 63990 ),
-       (4, 'Беззеркальный фотоаппарат Nikon Z', 949990),
-       (4, 'Цыфровой фотоопарат Matrix', 450990);
+       (2, 'Без зеркальный фотоаппарат Nikon Z', 949990),
+       (2, 'Цифровой фотоаппарат Matrix', 450990);
 
 insert into characteristic(category_id, name)
 values (1, 'Тип матрицы'),
        (1, 'Разрешение экрана'),
-       (4, 'Формат матрицы'),
-       (4, 'Форматы изображения');
+       (2, 'Формат матрицы'),
+       (2, 'Форматы изображения');
 
 insert into meaning(product_id, characteristic_id, text)
 values (1, 1, 'IPS'),
